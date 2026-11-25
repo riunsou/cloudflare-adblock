@@ -2,6 +2,7 @@ name: Cloudflare Gateway Cleanup
 
 on:
   workflow_dispatch:
+  
 permissions:
   contents: write
 jobs:
@@ -13,8 +14,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v7
-        with:
-          ref: personal
 
       - name: Set up Python
         uses: actions/setup-python@v7
