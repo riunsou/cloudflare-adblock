@@ -4,6 +4,7 @@ on:
   schedule:
     - cron: '0 */3 * * *'  # Runs every 3 hours
   workflow_dispatch:     # Allows manual runs
+  
 permissions:
   contents: write
 jobs:
@@ -15,8 +16,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v7
-        with:
-          ref: personal
 
       - name: Set up Python
         uses: actions/setup-python@v7
